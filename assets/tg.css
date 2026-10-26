@@ -377,3 +377,5 @@ footer.ft{background:#16122d;color:#bdb7e0;padding:72px 0 36px;font-size:15.5px}
 .rcard p{color:var(--ink2);font-size:15.5px}
 @media (max-width:980px){.rgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.rgrid{grid-template-columns:1fr}.acta{grid-template-columns:1fr;text-align:center;justify-items:center;padding:28px 22px}.art p,.art li{font-size:16.5px}}
+.spot{max-width:1000px;margin:40px auto 0;border-radius:28px;padding:10px;background:linear-gradient(135deg,#ffcf48,#f5a623);box-shadow:var(--shadow2)}
+.spot img{border-radius:20px;width:100%}
