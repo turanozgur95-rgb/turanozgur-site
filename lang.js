@@ -1,12 +1,18 @@
-/* Dil: önce kullanıcının seçimi, yoksa tarayıcı dili (Türkçe değilse İngilizce). */
+/* Dil: ?lang=tr|en > kullanıcının seçimi > tarayıcı dili (Türkçe değilse İngilizce). Tek dilli sayfalar (data-fixed) değişmez. */
 (function(){
-  var saved = null;
+  var h = document.documentElement;
+  h.className += ' js';
+  window.toggleLang = function(){};
+  if (h.hasAttribute('data-fixed')) return;
+  var m = location.search.match(/[?&]lang=(tr|en)\b/), saved = null;
   try { saved = localStorage.getItem('lang'); } catch (e) {}
+  if (m) { saved = m[1]; try { localStorage.setItem('lang', saved); } catch (e) {} }
   var l = saved || ((navigator.language || '').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en');
-  document.documentElement.lang = l;
+  function apply(){ h.lang = l; var t = h.getAttribute('data-t-' + l); if (t) document.title = t; }
+  apply();
   window.toggleLang = function(){
-    l = l === 'tr' ? 'en' : 'tr';
-    document.documentElement.lang = l;
+    l = h.lang === 'tr' ? 'en' : 'tr';
+    apply();
     try { localStorage.setItem('lang', l); } catch (e) {}
   };
 })();

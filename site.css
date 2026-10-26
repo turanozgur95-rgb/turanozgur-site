@@ -1,42 +1,31 @@
-/* Tamakala Games - geliştirici sitesi (tamakalagames.com). Oyunun renkleri: gece mavisi + meşale sarısı. */
-:root{--bg:#141a33;--bg2:#1b2340;--card:#232d5c;--line:#3a4c94;--ink:#fff7e6;--soft:#c9d0e8;--torch:#ffb703;--ok:#4cc38a}
+/* Tamakala Games - gizlilik ve belge sayfaları için stil (yeni site görünümüyle uyumlu). Ana sayfalar /assets/tg.css kullanır. */
+@font-face{font-family:"Nunito";src:url(/assets/fonts/nunito.woff2) format("woff2");font-weight:200 1000;font-display:swap}
+:root{--bg:#fffaf2;--card:#fff;--line:#efe5d5;--ink:#1d1838;--soft:#4f4972;--mute:#837da3;--violet:#6c4cff;--sun:#ffc233}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Trebuchet MS","Segoe UI",Roboto,Arial,sans-serif;line-height:1.6}
-a{color:var(--torch)}
-.wrap{max-width:980px;margin:0 auto;padding:0 16px}
-header.top{border-bottom:1px solid var(--line);background:var(--bg2)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
-.brand{color:var(--ink);text-decoration:none;font-weight:800;font-size:19px}
-nav a{color:var(--soft);text-decoration:none;margin-left:16px;font-size:15px}
-nav a:hover{color:var(--torch)}
-.lang{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:8px;padding:5px 10px;font-size:14px;cursor:pointer;margin-left:16px}
-h1{font-size:34px;line-height:1.2;margin:36px 0 10px}
-h2{font-size:24px;margin:34px 0 10px}
-p.lead{font-size:18px;color:var(--soft);margin:0 0 20px}
-.hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap;padding:12px 0 8px}
-.hero img.icon{width:120px;height:120px;border-radius:26px;box-shadow:0 8px 24px #0008}
-.hero .txt{flex:1;min-width:260px}
-.stores{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
-.btn{display:inline-block;background:var(--torch);color:#2a1d00;font-weight:800;text-decoration:none;border-radius:12px;padding:12px 18px}
-.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
-.shots{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:20px 0}
-.shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;padding:0;list-style:none}
-.feats li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
-.feats b{display:block;color:var(--torch)}
-.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.game{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;color:var(--ink);text-decoration:none}
-.game img{width:84px;height:84px;border-radius:18px}
-.game span{color:var(--soft);font-size:14px;display:block}
-footer{border-top:1px solid var(--line);margin-top:48px;padding:20px 0;color:var(--soft);font-size:14px}
-footer a{color:var(--soft);margin-right:16px}
-.doc h1{font-size:28px}.doc h2{font-size:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito",ui-rounded,"Segoe UI",system-ui,sans-serif;line-height:1.65;font-weight:600;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:var(--violet);font-weight:800}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;max-width:1200px}
+.brand{white-space:nowrap;color:var(--ink);text-decoration:none;font-weight:1000;font-size:20px;letter-spacing:-.03em;display:flex;align-items:center;gap:10px}
+.brand:before{content:"";width:34px;height:34px;flex:none;border-radius:11px;background:url(/assets/favicon.svg) center/cover}
+nav{display:flex;align-items:center;flex-wrap:wrap;gap:4px}
+nav a{color:var(--soft);text-decoration:none;font-weight:800;font-size:15px;padding:7px 11px;border-radius:10px}
+nav a:hover{background:#1d18380a;color:var(--ink)}
+.lang{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 13px;font:inherit;font-size:14px;font-weight:900;cursor:pointer;margin-left:6px}
+main.wrap{padding-top:28px;padding-bottom:80px}
+h1{font-size:clamp(30px,4.4vw,44px);line-height:1.12;letter-spacing:-.03em;font-weight:900;margin:30px 0 14px}
+h2{font-size:23px;line-height:1.2;letter-spacing:-.02em;font-weight:900;margin:36px 0 10px}
+p,li{color:var(--soft)}
+b,strong{color:var(--ink)}
+ul{padding-left:22px}
+li{margin-bottom:8px}
+img{max-width:100%;height:auto}
+.btn{display:inline-block;background:var(--ink);color:#fff;font-weight:900;text-decoration:none;border-radius:999px;padding:13px 22px}
+.btn.alt{background:var(--card);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+footer{background:#16122d;color:#bdb7e0;padding:28px 0;font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;max-width:1200px}
+footer a{color:#fff;font-weight:800;text-decoration:none}
 html[lang=tr] [data-l=en],html[lang=en] [data-l=tr]{display:none!important}
-@media (max-width:700px){
-  h1{font-size:28px}
-  .shots{grid-template-columns:repeat(5,70%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
-  .shots img{scroll-snap-align:start}
-  nav a{margin-left:10px;font-size:14px}
-  .lang{margin-left:10px}
-}
+@media (max-width:640px){body{font-size:16px}nav a{padding:6px 8px;font-size:14px}.brand{font-size:18px}}

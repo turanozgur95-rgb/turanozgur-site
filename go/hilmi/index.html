@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Hilmi ve Zaman Rüzgârı</title>
+<script>
+(function(){
+  var P="",A="",F="/hilmi/",q=new URLSearchParams(location.search),ua=navigator.userAgent;
+  var ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1),and=/Android/.test(ua);
+  var src=q.get("utm_source"),cmp=q.get("utm_campaign"),u;
+  if(ios&&A){u=new URL(A);if(src||cmp)u.searchParams.set("ct",((src||"go")+"-"+(cmp||"hi")).slice(0,40));}
+  else if(and&&P){u=new URL(P);if(src||cmp){var r=new URLSearchParams();r.set("utm_source",src||"go");r.set("utm_medium",q.get("utm_medium")||"link");r.set("utm_campaign",cmp||"hilmi-go");u.searchParams.set("referrer",r.toString());}}
+  location.replace(u?u.toString():F+location.search);
+})();
+</script></head><body><p><a href="/hilmi/">Hilmi ve Zaman Rüzgârı</a></p></body></html>
