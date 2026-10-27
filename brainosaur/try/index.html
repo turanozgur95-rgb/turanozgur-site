@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free gifted-style practice: 5 puzzles | Brainosaur</title>
+<meta name="description" content="Try 5 gifted & talented style puzzles with your child in 2 minutes: patterns, number grids, block counting, odd one out and balance. Free, no sign-up.">
+<link rel="canonical" href="https://tamakalagames.com/brainosaur/try/">
+<meta property="og:title" content="Can your child solve these 5 puzzles?">
+<meta property="og:description" content="Try 5 gifted & talented style puzzles with your child in 2 minutes: patterns, number grids, block counting, odd one out and balance. Free, no sign-up.">
+<meta property="og:image" content="https://tamakalagames.com/img/v2/brainosaur/og-en.jpg">
+<meta property="og:url" content="https://tamakalagames.com/brainosaur/try/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/v2/brainosaur/icon-256.webp">
+<style>
+@font-face{font-family:"Nunito";src:url(/assets/fonts/nunito.woff2) format("woff2");font-weight:200 1000;font-display:swap}
+:root{--g:#ff8a3d;--g2:#1d6b4f;--ink:#1f2340;--soft:#5d6283;--bg:#f4f7fb;--card:#fff;--ok:#2fa866;--bad:#e2554f}
+*{box-sizing:border-box}
+body{margin:0;font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.45}
+header{background:linear-gradient(150deg,var(--g),var(--g2));color:#fff;padding:22px 16px 70px;text-align:center}
+header a{color:#fff;opacity:.85;text-decoration:none;font-weight:700;font-size:15px}
+header img{width:72px;height:72px;border-radius:18px;display:block;margin:14px auto 8px;box-shadow:0 6px 18px #0003}
+h1{font-size:clamp(24px,6vw,36px);margin:6px auto;max-width:640px;font-weight:1000}
+header p{max-width:560px;margin:8px auto 0;opacity:.95}
+main{max-width:640px;margin:-48px auto 40px;padding:0 16px}
+.card{background:var(--card);border-radius:24px;box-shadow:0 10px 30px #1f234018;padding:22px}
+.top{display:flex;justify-content:space-between;align-items:center;color:var(--soft);font-weight:800;font-size:14px}
+.bar{height:8px;background:#e8ecf4;border-radius:9px;margin:8px 0 18px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--g);transition:width .3s}
+.qt{font-size:20px;font-weight:900;margin:0 0 14px}
+.fig{display:flex;justify-content:center;margin:6px 0 18px}
+.fig svg,.fig img{max-width:100%;height:auto}
+.opts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.opts.five{grid-template-columns:repeat(5,1fr)}
+.opt{background:#efe4cf;border:3px solid transparent;border-radius:16px;padding:8px 4px;font:900 28px Nunito,sans-serif;color:var(--ink);cursor:pointer;min-height:72px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 0 #cdbb98}
+.opt:hover{transform:translateY(-2px)}
+.opt svg{width:54px;height:54px}
+.opt.ok{border-color:var(--ok);background:#dff5e8}
+.opt.no{border-color:var(--bad);background:#fbe3e2}
+.opt:disabled{cursor:default;transform:none}
+.fb{margin-top:16px;border-radius:16px;padding:14px 16px;display:none}
+.fb.show{display:block}
+.fb b{font-size:18px}
+.fb.ok{background:#e6f7ee} .fb.no{background:#fdeceb}
+.fb p{margin:6px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:14px 26px;font:900 18px Nunito,sans-serif;cursor:pointer;text-decoration:none;color:#fff;background:var(--g2);margin-top:16px}
+.btn.alt{background:#fff;color:var(--g2);border:2px solid var(--g2)}
+.btn.wa{background:#25d366}
+.center{text-align:center}
+.score{font-size:44px;font-weight:1000;color:var(--g2);margin:4px 0}
+.stars{font-size:34px;letter-spacing:4px}
+.pitch{background:#f2f6ff;border-radius:16px;padding:14px 16px;margin:16px 0 4px;text-align:left}
+.note{color:var(--soft);font-size:13px;margin-top:18px;text-align:center}
+.hide{display:none}
+@media (max-width:420px){.opts.five{grid-template-columns:repeat(3,1fr)} .opt{min-height:64px}}
+</style>
+</head>
+<body>
+<header>
+<a href="/brainosaur/">← Brainosaur page</a>
+<img src="/img/v2/brainosaur/icon-256.webp" alt="" width="72" height="72">
+<h1>Can your child solve these 5 puzzles?</h1>
+<p>5 gifted-style puzzles, about 2 minutes. Read each one together and let your child choose. No sign-up, no data collected.</p>
+</header>
+<main>
+<div class="card" id="app">
+<div id="intro" class="center"><button class="btn" id="go">Start →</button></div>
+<div id="quiz" class="hide">
+<div class="top"><span id="qn"></span><span id="sc"></span></div>
+<div class="bar"><i id="pb" style="width:0"></i></div>
+<p class="qt" id="qt"></p>
+<div class="fig" id="fig"></div>
+<div class="opts" id="opts"></div>
+<div class="fb" id="fb"><b id="fbt"></b><p><b style="font-size:15px">How to think about it:</b> <span id="fbw"></span></p></div>
+<div class="center"><button class="btn hide" id="nx">Next puzzle →</button></div>
+</div>
+<div id="res" class="hide center">
+<div class="stars" id="st"></div>
+<div class="score" id="rt"></div>
+<p id="rm"></p>
+<div class="pitch">Brainosaur has <b>20+ puzzle types</b> like these inside a voiced dinosaur adventure. Every question is read aloud, Grandpa Woolly explains mistakes, difficulty adapts, and parents get a Test-Ready Report.</div>
+<a class="btn" href="/go/brainosaur/?utm_source=site&utm_medium=try&utm_campaign=br-try">Get Brainosaur</a><br>
+<a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">Share</a>
+<button class="btn alt" id="ag">Try again</button>
+</div>
+<p class="note">These are sample puzzle types from the game, not a test score or ability assessment. Not affiliated with any test publisher.</p>
+</div>
+</main>
+<script>
+const D={"slug": "brainosaur", "lang": "en", "q": "Puzzle", "of": "/", "right": "Correct!", "wrong": "Not this time.", "res_title": "Score: {n} / 5", "res": ["These puzzle types are new to most kids. The real difference shows up with practice.", "Great start! Speed and confidence grow as these puzzle types become familiar.", "Excellent! Getting used to the harder types (blocks, balance, folding) saves time on test day."], "share_text": "Can your kid solve these 5 gifted-style puzzles? Free 2-minute try: https://tamakalagames.com/brainosaur/try/", "qs": [{"kind": "matrix", "text": "Every row and column hides a rule. Which tile goes in the empty space?", "why": "Each row has a circle, a square and a triangle once; each column has red, blue and green once. The last row is missing a square and the last column is missing red: a red square."}, {"kind": "grid", "text": "The numbers in each row follow a rule. Which number goes in the empty box?", "why": "In each row the first two numbers add up to the third: 6 + 5 = 11, 7 + 7 = 14. In the middle row 5 + ? = 6, so it's 1."}, {"kind": "cubes", "text": "How many blocks are in this tower? Count the hidden ones behind and below, too.", "why": "Every block you see on top has a block under it, because blocks can't float. Count each stack, then add them up: 7 blocks."}, {"kind": "odd", "text": "One of these shapes is different from the others. Which one?", "why": "All the other shapes have 4 corners. The triangle has only 3."}, {"kind": "balance", "text": "The scales are balanced. How many circles is one triangle worth?", "why": "2 circles = 1 square. 2 squares = 1 triangle. So 1 triangle = 2 squares = 2 + 2 = 4 circles."}]};
+const C={red:"#e2554f",blue:"#3b7be0",green:"#2fa866",gold:"#f2b632",ink:"#2b2f4a"};
+function shape(k,col,x,y,s){s=s||30;
+ if(k==="c")return `<circle cx="${x}" cy="${y}" r="${s*.62}" fill="${col}"/>`;
+ if(k==="s")return `<rect x="${x-s*.58}" y="${y-s*.58}" width="${s*1.16}" height="${s*1.16}" rx="4" fill="${col}"/>`;
+ if(k==="t")return `<polygon points="${x},${y-s*.7} ${x+s*.72},${y+s*.55} ${x-s*.72},${y+s*.55}" fill="${col}"/>`;
+ if(k==="r")return `<rect x="${x-s*.8}" y="${y-s*.45}" width="${s*1.6}" height="${s*.9}" rx="3" fill="${col}"/>`;
+ if(k==="d")return `<polygon points="${x},${y-s*.75} ${x+s*.6},${y} ${x},${y+s*.75} ${x-s*.6},${y}" fill="${col}"/>`;
+ if(k==="z")return `<polygon points="${x-s*.45},${y-s*.5} ${x+s*.45},${y-s*.5} ${x+s*.8},${y+s*.5} ${x-s*.8},${y+s*.5}" fill="${col}"/>`;
+ return "";}
+function tile(inner){return `<svg viewBox="0 0 80 80"><rect x="2" y="2" width="76" height="76" rx="12" fill="#efe4cf"/>${inner}</svg>`;}
+function one(k,col){return `<svg viewBox="0 0 80 80">${shape(k,col,40,42,34)}</svg>`;}
+const QS=[
+ {fig:()=>{const g=[["c","red"],["s","blue"],["t","green"],["s","green"],["t","red"],["c","blue"],["t","blue"],["c","green"],null];
+   let h='<svg viewBox="0 0 270 270" width="270" height="270"><rect width="270" height="270" rx="22" fill="#7fa7c9"/>';
+   g.forEach((c,i)=>{const x=15+(i%3)*85,y=15+Math.floor(i/3)*85;h+=`<rect x="${x}" y="${y}" width="72" height="72" rx="12" fill="${c?"#efe4cf":"#3a2f2a"}"/>`;
+    h+=c?shape(c[0],C[c[1]],x+36,y+38,30):`<text x="${x+36}" y="${y+50}" text-anchor="middle" font-size="40" font-weight="900" fill="#f2e3c4">?</text>`;});return h+"</svg>";},
+  opts:[one("t","#3b7be0"),one("c","#e2554f"),one("t","#e2554f"),one("s","#e2554f")],a:3},
+ {fig:()=>{const g=[6,5,11,5,"?",6,7,7,14];let h='<svg viewBox="0 0 270 270" width="270" height="270"><rect width="270" height="270" rx="22" fill="#7fa7c9"/>';
+   g.forEach((n,i)=>{const x=15+(i%3)*85,y=15+Math.floor(i/3)*85,q=n==="?";h+=`<rect x="${x}" y="${y}" width="72" height="72" rx="12" fill="${q?"#3a2f2a":"#efe4cf"}"/><text x="${x+36}" y="${y+50}" text-anchor="middle" font-size="34" font-weight="900" font-family="Nunito,sans-serif" fill="${q?"#f2e3c4":"#2b2f4a"}">${n}</text>`;});return h+"</svg>";},
+  opts:["3","0","1","5"],a:2},
+ {fig:()=>`<img src="/img/v2/${D.slug}/deneme-kup.webp" width="420" height="320" alt="" style="border-radius:18px">`,opts:["6","7","8","9"],a:1},
+ {fig:()=>"",opts:[one("s","#3b7be0"),one("r","#2fa866"),one("t","#f2b632"),one("d","#e2554f"),one("z","#8a5cd6")],a:2,five:true},
+ {fig:()=>{const pan=(items,x)=>items.map((k,i)=>shape(k,k==="c"?C.red:k==="s"?C.blue:C.green,x+(i-(items.length-1)/2)*30,58,22)).join("");
+   const sc=(L,R,y)=>`<g transform="translate(0,${y})"><line x1="150" y1="20" x2="150" y2="96" stroke="#5d6283" stroke-width="6"/><line x1="40" y1="78" x2="260" y2="78" stroke="#5d6283" stroke-width="6" stroke-linecap="round"/><path d="M120 100h60l-10-8h-40z" fill="#5d6283"/>${pan(L,85)}${pan(R,215)}</g>`;
+   return `<svg viewBox="0 0 300 220" width="300" height="220"><rect width="300" height="220" rx="22" fill="#eef2fa"/>${sc(["c","c"],["s"],0)}${sc(["s","s"],["t"],108)}</svg>`;},
+  opts:["3","4","5","6"],a:1}
+];
+let i=0,score=0;const $=id=>document.getElementById(id);
+function show(){const q=QS[i],t=D.qs[i];$("qn").textContent=`${D.q} ${i+1} ${D.of} 5`;$("sc").textContent="★ "+score;$("pb").style.width=(i/5*100)+"%";
+ $("qt").textContent=t.text;$("fig").innerHTML=q.fig();$("fig").style.display=q.fig()?"flex":"none";
+ const o=$("opts");o.className="opts"+(q.five?" five":"");o.innerHTML="";
+ q.opts.forEach((v,k)=>{const b=document.createElement("button");b.className="opt";b.innerHTML=v.startsWith("<")?v:v;b.onclick=()=>pick(k,b);o.appendChild(b);});
+ $("fb").className="fb";$("nx").classList.add("hide");}
+function pick(k,b){const q=QS[i],ok=k===q.a;[...$("opts").children].forEach((x,j)=>{x.disabled=true;if(j===q.a)x.classList.add("ok");});
+ if(!ok)b.classList.add("no");else score++;$("sc").textContent="★ "+score;
+ $("fbt").textContent=ok?D.right:D.wrong;$("fbw").textContent=D.qs[i].why;$("fb").className="fb show "+(ok?"ok":"no");$("nx").classList.remove("hide");}
+$("go").onclick=()=>{$("intro").classList.add("hide");$("quiz").classList.remove("hide");show();};
+$("nx").onclick=()=>{i++;if(i<5){show();window.scrollTo({top:0,behavior:"smooth"});}else done();};
+function done(){$("quiz").classList.add("hide");$("res").classList.remove("hide");$("pb").style.width="100%";
+ $("st").textContent="★".repeat(score)+"☆".repeat(5-score);$("rt").textContent=D.res_title.replace("{n}",score);
+ $("rm").textContent=D.res[score<=2?0:score<=4?1:2];
+ $("wa").href=(D.lang==="tr"?"https://wa.me/?text=":"https://wa.me/?text=")+encodeURIComponent(D.share_text);}
+$("ag").onclick=()=>{i=0;score=0;$("res").classList.add("hide");$("quiz").classList.remove("hide");show();};
+</script>
+</body>
+</html>
