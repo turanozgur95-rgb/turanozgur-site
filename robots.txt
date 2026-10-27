@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
 
 Sitemap: https://tamakalagames.com/sitemap.xml
