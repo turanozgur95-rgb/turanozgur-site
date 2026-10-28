@@ -3,7 +3,7 @@
 <title>Castle Rescue</title>
 <script>
 (function(){
-  var P="",A="",F="/kaleden-kurtar/",q=new URLSearchParams(location.search),ua=navigator.userAgent;
+  var P="https://play.google.com/store/apps/details?id=com.turanozgur.kaledenkurtar&referrer=utm_source%3Dtamakalagames.com%26utm_medium%3Dwebsite%26utm_campaign%3Dkaleden-kurtar-go",A="",F="/kaleden-kurtar/",q=new URLSearchParams(location.search),ua=navigator.userAgent;
   var ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1),and=/Android/.test(ua);
   var src=q.get("utm_source"),cmp=q.get("utm_campaign"),u;
   if(ios&&A){u=new URL(A);if(src||cmp)u.searchParams.set("ct",((src||"go")+"-"+(cmp||"kk")).slice(0,40));}
