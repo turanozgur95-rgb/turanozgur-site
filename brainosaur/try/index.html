@@ -52,6 +52,9 @@ main{max-width:640px;margin:-48px auto 40px;padding:0 16px}
 .pitch{background:#f2f6ff;border-radius:16px;padding:14px 16px;margin:16px 0 4px;text-align:left}
 .note{color:var(--soft);font-size:13px;margin-top:18px;text-align:center}
 .hide{display:none}
+.about{margin-top:28px;padding:0 6px} .about:empty{display:none}
+.about h2{font-size:22px;margin:22px 0 8px} .about p,.about li{color:var(--soft);font-size:17px}
+.about a{color:var(--g2);font-weight:800} .about li{margin-bottom:8px}
 @media (max-width:420px){.opts.five{grid-template-columns:repeat(3,1fr)} .opt{min-height:64px}}
 </style>
 </head>
@@ -85,6 +88,7 @@ main{max-width:640px;margin:-48px auto 40px;padding:0 16px}
 </div>
 <p class="note">These are sample puzzle types from the game, not a test score or ability assessment. Not affiliated with any test publisher.</p>
 </div>
+<section class="about"></section>
 </main>
 <script>
 const D={"slug": "brainosaur", "lang": "en", "q": "Puzzle", "of": "/", "right": "Correct!", "wrong": "Not this time.", "res_title": "Score: {n} / 5", "res": ["These puzzle types are new to most kids. The real difference shows up with practice.", "Great start! Speed and confidence grow as these puzzle types become familiar.", "Excellent! Getting used to the harder types (blocks, balance, folding) saves time on test day."], "share_text": "Can your kid solve these 5 gifted-style puzzles? Free 2-minute try: https://tamakalagames.com/brainosaur/try/", "qs": [{"kind": "matrix", "text": "Every row and column hides a rule. Which tile goes in the empty space?", "why": "Each row has a circle, a square and a triangle once; each column has red, blue and green once. The last row is missing a square and the last column is missing red: a red square."}, {"kind": "grid", "text": "The numbers in each row follow a rule. Which number goes in the empty box?", "why": "In each row the first two numbers add up to the third: 6 + 5 = 11, 7 + 7 = 14. In the middle row 5 + ? = 6, so it's 1."}, {"kind": "cubes", "text": "How many blocks are in this tower? Count the hidden ones behind and below, too.", "why": "Every block you see on top has a block under it, because blocks can't float. Count each stack, then add them up: 7 blocks."}, {"kind": "odd", "text": "One of these shapes is different from the others. Which one?", "why": "All the other shapes have 4 corners. The triangle has only 3."}, {"kind": "balance", "text": "The scales are balanced. How many circles is one triangle worth?", "why": "2 circles = 1 square. 2 squares = 1 triangle. So 1 triangle = 2 squares = 2 + 2 = 4 circles."}]};
