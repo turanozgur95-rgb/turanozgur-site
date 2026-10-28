@@ -3,7 +3,7 @@
 <title>Hilmi ve Zaman Rüzgârı</title>
 <script>
 (function(){
-  var P="",A="https://apps.apple.com/app/id6822944090?pt=129580598&ct=web-hi-go&mt=8",F="/hilmi/",q=new URLSearchParams(location.search),ua=navigator.userAgent;
+  var P="",A="https://apps.apple.com/tr/app/id6822944090?pt=129580598&ct=web-hi-go&mt=8",F="/hilmi/",q=new URLSearchParams(location.search),ua=navigator.userAgent;
   var ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1),and=/Android/.test(ua);
   var src=q.get("utm_source"),cmp=q.get("utm_campaign"),u;
   if(ios&&A){u=new URL(A);if(src||cmp)u.searchParams.set("ct",((src||"go")+"-"+(cmp||"hi")).slice(0,40));}
