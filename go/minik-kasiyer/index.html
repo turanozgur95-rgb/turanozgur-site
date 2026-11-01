@@ -3,7 +3,7 @@
 <title>Little Cashier</title>
 <script>
 (function(){
-  var P="",A="",F="/minik-kasiyer/",q=new URLSearchParams(location.search),ua=navigator.userAgent;
+  var P="",A="https://apps.apple.com/app/id6822158523?pt=129580598&ct=web-mk-go&mt=8",F="/minik-kasiyer/",q=new URLSearchParams(location.search),ua=navigator.userAgent;
   var ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1),and=/Android/.test(ua);
   var src=q.get("utm_source"),cmp=q.get("utm_campaign"),u;
   if(ios&&A){u=new URL(A);if(src||cmp)u.searchParams.set("ct",((src||"go")+"-"+(cmp||"mk")).slice(0,40));}
