@@ -20,6 +20,88 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/tg.css?v=10">
+<style>
+.hh{position:relative;overflow:hidden;color:#fff;background:#120e2c;isolation:isolate;border-bottom:1px solid #ffffff1a}
+.hh::before{content:"";position:absolute;inset:0;z-index:-1;background:
+radial-gradient(900px 520px at 78% 30%,#2a3d8fcc 0,transparent 62%),
+radial-gradient(620px 420px at 92% 92%,#27b5c955 0,transparent 60%),
+radial-gradient(700px 500px at 0% 0%,#6c4cff40 0,transparent 60%),
+linear-gradient(180deg,#141033 0,#1d1838 100%)}
+.hh::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.55;background-image:
+radial-gradient(1.4px 1.4px at 12% 22%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 32% 78%,#fff 50%,transparent 51%),
+radial-gradient(1.6px 1.6px at 56% 14%,#ffe7a3 50%,transparent 51%),radial-gradient(1.1px 1.1px at 71% 62%,#fff 50%,transparent 51%),
+radial-gradient(1.3px 1.3px at 88% 18%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 44% 46%,#cfc8ff 50%,transparent 51%),
+radial-gradient(1.5px 1.5px at 6% 64%,#ffe7a3 50%,transparent 51%),radial-gradient(1.1px 1.1px at 95% 80%,#fff 50%,transparent 51%)}
+.hh .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);grid-template-areas:"top vis" "bot vis";column-gap:56px;align-items:center;padding-top:44px;padding-bottom:72px;min-height:min(calc(100svh - 72px),780px)}
+.hh-top{grid-area:top;align-self:end}.hh-bot{grid-area:bot;align-self:start}.hh-vis{grid-area:vis}
+.hh-pill{display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 8px;border-radius:999px;background:#ffffff14;box-shadow:inset 0 0 0 1px #ffffff26;font-size:14px;font-weight:900;letter-spacing:.01em;color:#fff}
+.hh-pill i{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#27b5c9,#2a3d8f);font-style:normal}
+.hh-pill svg{width:16px;height:16px}
+.hh h1{font-size:clamp(34px,4.6vw,64px);line-height:1.04;letter-spacing:-.035em;margin:22px 0 0;color:#fff;text-wrap:balance}
+.hh h1 em{font-style:normal;background:linear-gradient(92deg,#ffd166,#ffc233 45%,#ff9f43);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hh-prod{display:flex;align-items:center;gap:14px;margin:26px 0 12px}
+.hh-prod img{width:60px;height:60px;border-radius:16px;box-shadow:0 8px 22px -6px #000a,0 0 0 1px #ffffff26}
+.hh-prod b{display:block;font-size:22px;font-weight:1000;letter-spacing:-.015em;line-height:1.15}
+.hh-prod small{display:block;font-size:13px;font-weight:800;color:#bdb6e6;letter-spacing:.06em;text-transform:uppercase}
+.hh-lead{font-size:clamp(17px,1.5vw,19.5px);color:#d9d4f5;max-width:540px;font-weight:600}
+.hh-lead b{color:#fff;font-weight:900}
+.hh-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:26px 0 16px}
+.hh-app{display:inline-flex;align-items:center;gap:14px;background:#fff;color:#120e2c;text-decoration:none;border-radius:18px;padding:12px 14px 12px 20px;font-weight:1000;font-size:18px;box-shadow:0 18px 40px -14px #ffc23399,0 2px 0 #ffffff inset;transition:transform .15s,box-shadow .15s}
+.hh-app:hover{transform:translateY(-2px);box-shadow:0 24px 48px -14px #ffc233bb}
+.hh-app>svg{width:26px;height:26px;flex:none}
+.hh-app .pr{background:#120e2c;color:#ffc233;border-radius:12px;padding:6px 10px;font-size:14.5px;font-weight:1000;white-space:nowrap}
+.hh-try{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;border-radius:18px;padding:15px 22px;font-weight:900;font-size:17px;box-shadow:inset 0 0 0 1.5px #ffffff59;transition:background .15s,box-shadow .15s}
+.hh-try:hover{background:#ffffff12;box-shadow:inset 0 0 0 1.5px #fff}
+.hh-try svg{width:20px;height:20px}
+.hh-sub{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;font-size:14.5px;font-weight:800;color:#bdb6e6}
+.hh-gp{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 10px;border-radius:12px;box-shadow:inset 0 0 0 1.5px #ffffff2e;color:#d9d4f5}
+.hh-gp svg{width:18px;height:18px}
+.hh-sub a{color:#fff;text-underline-offset:3px}
+.hh-trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin:22px 0 0;padding:16px 0 0;border-top:1px solid #ffffff1f;list-style:none;padding-left:0}
+.hh-trust li{display:inline-flex;align-items:center;gap:7px;font-weight:900;font-size:15px;color:#fff}
+.hh-trust svg{width:18px;height:18px;color:#ffc233}
+.hh-legal{margin-top:14px;font-size:13px;color:#aaa3d4;font-weight:700}
+.hh-vis{position:relative;margin:0}
+.hh-vis::before{content:"";position:absolute;inset:8% 4% -6%;background:radial-gradient(closest-side,#27b5c966,transparent);filter:blur(30px);z-index:-1}
+.hh-tag{position:absolute;z-index:3;top:-16px;left:28px;display:inline-flex;align-items:center;gap:8px;background:#ffc233;color:#120e2c;border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:1000;box-shadow:0 10px 24px -8px #000c}
+.hh-tag::before{content:"";width:8px;height:8px;border-radius:50%;background:#120e2c;animation:hhb 1.6s ease-in-out infinite}
+.hh-dev{position:relative;border-radius:30px;padding:12px;background:linear-gradient(145deg,#3a3566,#17132f);box-shadow:0 0 0 1px #ffffff1f,0 40px 80px -24px #000d,inset 0 1px 0 #ffffff2e}
+.hh-scr{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:1056/604;background:#1d1838}
+.hh-scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hh-scr .q2{opacity:0;animation:hq2 15s infinite}.hh-scr .q3{opacity:0;animation:hq3 15s infinite}
+.hh-cap{display:flex;justify-content:center;gap:8px;margin-top:18px;padding:0;list-style:none}
+.hh-cap li{font-size:13.5px;font-weight:900;color:#bdb6e6;padding:6px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px #ffffff26}
+.hh-cap .c1{animation:hc1 15s infinite}.hh-cap .c2{animation:hc2 15s infinite}.hh-cap .c3{animation:hc3 15s infinite}
+.hh-ico{position:absolute;z-index:3;right:-20px;top:-34px;width:88px;height:88px;border-radius:24px;box-shadow:0 18px 36px -10px #000c,0 0 0 3px #ffffff2e;animation:hf 6s ease-in-out infinite}
+@keyframes hq2{0%,30%{opacity:0}33.3%,63%{opacity:1}66.6%,100%{opacity:0}}
+@keyframes hq3{0%,63%{opacity:0}66.6%,96.5%{opacity:1}100%{opacity:0}}
+@keyframes hc1{0%,30%,100%{background:#ffffff1f;color:#fff}33.3%,96.5%{background:none;color:#bdb6e6}}
+@keyframes hc2{0%,30%,66.6%,100%{background:none;color:#bdb6e6}33.3%,63%{background:#ffffff1f;color:#fff}}
+@keyframes hc3{0%,63%{background:none;color:#bdb6e6}66.6%,96.5%{background:#ffffff1f;color:#fff}100%{background:none;color:#bdb6e6}}
+@keyframes hf{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(-1deg)}}
+@keyframes hhb{0%,100%{opacity:1}50%{opacity:.25}}
+.hh :focus-visible{outline-color:#ffc233}
+@media (max-width:980px){
+.hh .wrap{grid-template-columns:1fr;grid-template-areas:"top" "vis" "bot";min-height:0;padding-top:28px;padding-bottom:60px;row-gap:0}
+.hh-vis{margin:30px 0 4px;max-width:640px;width:100%;justify-self:center}
+.hh-top,.hh-bot{max-width:640px;width:100%;justify-self:center}
+}
+@media (max-width:640px){
+.hh .wrap{padding-top:20px;padding-bottom:48px}
+.hh-pill{font-size:12.5px;padding:5px 12px 5px 6px}.hh-pill i{width:22px;height:22px}
+.hh h1{font-size:clamp(30px,8.6vw,38px);margin-top:14px}
+.hh-vis{margin:24px 0 0}
+.hh-dev{border-radius:20px;padding:7px}.hh-scr{border-radius:14px}
+.hh-tag{top:-13px;left:14px;font-size:12px;padding:5px 11px}
+.hh-ico{display:none}
+.hh-cap{margin-top:12px;gap:6px}.hh-cap li{font-size:12px;padding:4px 10px}
+.hh-prod{margin:22px 0 10px}.hh-prod img{width:52px;height:52px;border-radius:14px}.hh-prod b{font-size:19px}
+.hh-ctas{margin:22px 0 16px}
+.hh-app,.hh-try{width:100%;justify-content:center}
+.hh-app{padding:12px 12px 12px 16px;font-size:17px}.hh-app .pr{margin-left:auto}
+.hh-trust{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}.hh-trust li{font-size:14.5px}
+}
+</style>
 <script src="/lang.js?v=2"></script>
 <script src="/assets/tg.js?v=2" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Tamakala Games", "url": "https://tamakalagames.com/", "logo": "https://tamakalagames.com/assets/icon-512.png", "email": "info@tamakalagames.com"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Tamakala Games", "url": "https://tamakalagames.com/", "inLanguage": ["tr", "en"]}</script>
@@ -27,10 +109,35 @@
 <body>
 <header class="nav"><div class="wrap"><a class="logo" href="/" aria-label="Tamakala Games"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lgn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c4cff"/><stop offset="1" stop-color="#ff6b6b"/></linearGradient></defs><rect width="40" height="40" rx="12" fill="url(#lgn)"/><path d="M20 9l3.3 6.8 7.4 1-5.4 5.2 1.3 7.4L20 25.9l-6.6 3.5 1.3-7.4-5.4-5.2 7.4-1z" fill="#fff" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="31.5" cy="31.5" r="3.3" fill="#ffc233"/></svg><span>Tamakala<small>GAMES</small></span></a><nav class="links" aria-label="Menu"><a href="/#oyunlar"><span data-l="tr">Oyunlar</span><span data-l="en">Games</span></a><a href="/#aileler"><span data-l="tr">Aileler için</span><span data-l="en">For parents</span></a><a href="/#ogretmenler"><span data-l="tr">Öğretmenler</span><span data-l="en">Teachers</span></a><a href="/rehber/"><span data-l="tr">Veli rehberi</span><span data-l="en">Guides</span></a><a href="/basin/"><span data-l="tr">Basın kiti</span><span data-l="en">Press kit</span></a><a href="/destek/"><span data-l="tr">Destek</span><span data-l="en">Support</span></a><button class="langbtn" data-lang-toggle aria-label="Language / Dil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg><span data-l="tr">English</span><span data-l="en">Türkçe</span></button></nav><button class="menubtn" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></header>
 <main>
-<section class="hero"><div class="wrap">
+<section class="hh" data-l="tr" aria-labelledby="hh-h"><div class="wrap">
+<div class="hh-top">
+<span class="hh-pill"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17c2 0 3-1 4-3l1-3c.6-1.8 2.2-3 4-3h3l2-3h2l1 2-2 2v3c0 3-2 5-5 5h-1l-1 3h-2l.5-3H8l-1 3H5l.5-3"/><circle cx="17.5" cy="6.3" r=".6" fill="currentColor"/></svg></i>BİLSEM hazırlık oyunu · 1–3. sınıf</span>
+<h1 id="hh-h">Bu soruyu çocuğunuz <em>çözebilir mi?</em></h1>
+</div>
+<figure class="hh-vis">
+<span class="hh-tag">Gerçek oyun sorusu</span>
+<div class="hh-dev"><div class="hh-scr">
+<img class="q1" src="/img/v2/hilmi/soru-1-1056.webp" srcset="/img/v2/hilmi/soru-1-640.webp 640w, /img/v2/hilmi/soru-1-1056.webp 1056w" sizes="(max-width:640px) calc(100vw - 46px), (max-width:980px) 640px, 600px" width="1056" height="604" fetchpriority="high" alt="Hilmi oyunundan bir matris sorusu: 3x3 tablodaki şekillerin satır ve sütunlarda nasıl değiştiğine bakıp boş kareye uyan taşı seçmek">
+<img class="q2" src="/img/v2/hilmi/soru-2-1056.webp" srcset="/img/v2/hilmi/soru-2-640.webp 640w, /img/v2/hilmi/soru-2-1056.webp 1056w" sizes="(max-width:640px) calc(100vw - 46px), (max-width:980px) 640px, 600px" width="1056" height="604" loading="lazy" decoding="async" alt="Küp sayma sorusu: görünmeyen blokları da sayarak kaç blok olduğunu bulmak">
+<img class="q3" src="/img/v2/hilmi/soru-3-1056.webp" srcset="/img/v2/hilmi/soru-3-640.webp 640w, /img/v2/hilmi/soru-3-1056.webp 1056w" sizes="(max-width:640px) calc(100vw - 46px), (max-width:980px) 640px, 600px" width="1056" height="604" loading="lazy" decoding="async" alt="Terazi sorusu: dengedeki terazilerden ipucu alıp sağdaki terazinin dengede kalması için kaç mantar gerektiğini bulmak">
+</div></div>
+<img class="hh-ico" src="/img/v2/hilmi/icon-256.webp" width="256" height="256" alt="">
+<ul class="hh-cap" aria-hidden="true"><li class="c1">Matris</li><li class="c2">Küp sayma</li><li class="c3">Terazi</li></ul>
+</figure>
+<div class="hh-bot">
+<div class="hh-prod"><img src="/img/v2/hilmi/icon-256.webp" width="60" height="60" alt=""><div><b>Hilmi ve Zaman Rüzgârı</b><small>Tamakala Games · 6–9 yaş</small></div></div>
+<p class="hh-lead"><b>BİLSEM tarzı 20 soru tipi</b>, dinozorlu bir zaman yolculuğunun içinde. Çocuğunuz ders çalıştığını değil, macera yaşadığını hisseder.</p>
+<div class="hh-ctas">
+<a class="hh-app" data-store="apple" data-place="hilmi-home-hero" href="https://apps.apple.com/tr/app/id6822944090?pt=129580598&amp;ct=web-hi-home-hero&amp;mt=8" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>App Store'dan indir<span class="pr">599,99 TL</span></a>
+<a class="hh-try" href="/hilmi/deneme/">Ücretsiz deneme sorularını çöz<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+<div class="hh-sub"><span class="hh-gp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5l9.5 8.5L5 20.5c-.6-.3-1-.9-1-1.6V5.1c0-.7.4-1.3 1-1.6z"/><path d="M14.5 12l3-2.7 2.3 1.3c1 .6 1 2.2 0 2.8l-2.3 1.3z"/><path d="M5 3.5l12.5 5.8M5 20.5l12.5-5.8"/></svg>Yakında Google Play'de</span><a href="https://youtu.be/qICL7fEPUhQ" rel="noopener" target="_blank">Tanıtım videosunu izle</a><a href="/hilmi/">Oyunu incele</a></div>
+<ul class="hh-trust" aria-label="Satın alma koşulları"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tek ödeme</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Abonelik yok</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Reklamsız</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>İnternetsiz</li></ul>
+<p class="hh-legal">Hilmi ve Zaman Rüzgârı'nın MEB veya BİLSEM ile resmî bağlantısı yoktur. iPhone ve iPad için.</p>
+</div>
+</div></section><section class="hero" data-l="en"><div class="wrap">
 <div>
 <span class="pill"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></i><span data-l="tr">Reklamsız · Veri toplamaz · İnternetsiz</span><span data-l="en">Ad-free · No data collected · Offline</span></span>
-<h1 data-l="tr">Ekran süresini <span class="c1">öğrenme</span> <span class="c2">macerasına</span> çeviren oyunlar</h1>
 <h1 data-l="en">Games that turn <span class="c1">screen time</span> into <span class="c2">learning time</span></h1>
 <p class="lead" data-l="tr">Tamakala Games, 3–10 yaş çocuklar için matematik, mantık ve değerler üzerine sevimli 3D oyunlar yapar. Çocuk oynadığını sanır; siz öğrendiğini görürsünüz.</p><p class="lead" data-l="en">Tamakala Games makes charming 3D games about math, logic and values for kids aged 3–10. Kids think they're playing; you can see them learning.</p>
 <div class="ctas"><a class="btn pri" href="#oyunlar"><span data-l="tr">Oyunları keşfet</span><span data-l="en">Explore the games</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="#aileler"><span data-l="tr">Aileler için sözümüz</span><span data-l="en">Our promise to parents</span></a></div>
