@@ -4,10 +4,13 @@
   h.className += ' js';
   window.toggleLang = function(){};
   if (h.hasAttribute('data-fixed')) return;
-  var m = location.search.match(/[?&]lang=(tr|en)\b/), saved = null;
+  var m = location.search.match(/[?&]lang=(tr|en|nl)\b/), saved = null;
   try { saved = localStorage.getItem('lang'); } catch (e) {}
   if (m) { saved = m[1]; try { localStorage.setItem('lang', saved); } catch (e) {} }
-  var l = saved || ((navigator.language || '').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en');
+  var nv = (navigator.language || '').toLowerCase();
+  var l = saved || (nv.indexOf('tr') === 0 ? 'tr' : nv.indexOf('nl') === 0 ? 'nl' : 'en');
+  // Hollandaca: ana sayfa /nl/ (Spoorstart önde); diğer sayfalar İngilizce
+  if (l === 'nl') { if (location.pathname === '/') { location.replace('/nl/'); return; } l = 'en'; }
   function apply(){ h.lang = l; var t = h.getAttribute('data-t-' + l); if (t) document.title = t;
     var d = h.getAttribute('data-d-' + l), m = document.querySelector('meta[name="description"]'); if (d && m) m.setAttribute('content', d); }
   apply();
