@@ -23,22 +23,120 @@
 <script src="/lang.js?v=3"></script>
 <script src="/assets/tg.js?v=2" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Brainosaur: Gifted Test Prep", "alternateName": ["Brainosaur: Gifted Test Prep"], "applicationCategory": "EducationalApplication", "applicationSubCategory": "Educational game", "operatingSystem": "Android, iOS, iPadOS", "url": "https://tamakalagames.com/brainosaur/", "image": "https://tamakalagames.com/img/v2/brainosaur/icon-512.png", "screenshot": ["https://tamakalagames.com/img/v2/brainosaur/shot-en-1-l.webp", "https://tamakalagames.com/img/v2/brainosaur/shot-en-2-l.webp", "https://tamakalagames.com/img/v2/brainosaur/shot-en-3-l.webp", "https://tamakalagames.com/img/v2/brainosaur/shot-en-4-l.webp", "https://tamakalagames.com/img/v2/brainosaur/shot-en-5-l.webp", "https://tamakalagames.com/img/v2/brainosaur/shot-en-6-l.webp", "https://tamakalagames.com/img/v2/brainosaur/shot-en-7-l.webp"], "description": "Your child travels through 12 time periods with Milo, Tiko the baby dinosaur and Grandpa Woolly. Every obstacle is a picture, number or shape puzzle in the style of US school G&T screening tests.", "inLanguage": ["en"], "audience": {"@type": "PeopleAudience", "suggestedMinAge": 5, "suggestedMaxAge": 9}, "publisher": {"@type": "Organization", "name": "Tamakala Games", "url": "https://tamakalagames.com/"}, "isFamilyFriendly": true, "sameAs": ["https://apps.apple.com/app/id6823756292"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does Brainosaur help with the CogAT?", "acceptedAnswer": {"@type": "Answer", "text": "Brainosaur includes all nine CogAT-style question types (picture analogies, sentence completion, picture classification, number analogies, number puzzles, number series, figure matrices, paper folding and figure classification) plus a short-screener practice test. Questions are original, not actual test items."}}, {"@type": "Question", "name": "Does it help with the NNAT3 or NGAT?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It has the shape-only question types used on nonverbal screeners, a 48-question / 30-minute Shape Test practice run, a six-picture Odd One Out and number-pattern puzzles in the NGAT style."}}, {"@type": "Question", "name": "Which grades is it for?", "acceptedAnswer": {"@type": "Answer", "text": "Kindergarten to 3rd grade (ages 5–9), with a focus on 2nd grade, the most common screening year. Every question is read aloud, so no reading is needed."}}, {"@type": "Question", "name": "How long should my child play each day?", "acceptedAnswer": {"@type": "Answer", "text": "15–20 minutes a day is enough."}}, {"@type": "Question", "name": "Is there a subscription?", "acceptedAnswer": {"@type": "Answer", "text": "No. Brainosaur is a one-time purchase with no subscription, no in-app purchases and no ads."}}, {"@type": "Question", "name": "Does it collect any data?", "acceptedAnswer": {"@type": "Answer", "text": "No. There is no tracking and no data collection, and the game works offline."}}, {"@type": "Question", "name": "Can Brainosaur guarantee my child gets into a gifted program?", "acceptedAnswer": {"@type": "Answer", "text": "No. No practice can guarantee a test result or a placement. Brainosaur helps your child get familiar with the question types, pace and format of school gifted screening tests, and the Test-Ready Report shows which skills need more practice. Brainosaur is independent and not affiliated with any test publisher or school district."}}, {"@type": "Question", "name": "How do I open the Test-Ready Report?", "acceptedAnswer": {"@type": "Answer", "text": "Tap \"Report\" in the menu. A number appears written in words; type it using digits to pass the parent gate. Inside, tap \"Set date\" to start the countdown to test day."}}, {"@type": "Question", "name": "Is there a screen time limit?", "acceptedAnswer": {"@type": "Answer", "text": "The game has no built-in timer or daily lock; 15–20 minutes a day is enough. To set a limit, use Screen Time > App Limits on iPhone and iPad, or Google Family Link on Android."}}, {"@type": "Question", "name": "What happens to progress if I delete the app?", "acceptedAnswer": {"@type": "Answer", "text": "There are no accounts or cloud saves, so progress and the Test-Ready Report are stored only on the device. If the app is deleted or its data is cleared, they are erased and we can't restore them, because we never have a copy."}}]}</script>
+<style>
+.hh{position:relative;overflow:hidden;color:#fff;background:#120e2c;isolation:isolate;border-bottom:1px solid #ffffff1a}
+.hh::before{content:"";position:absolute;inset:0;z-index:-1;background:
+radial-gradient(900px 520px at 78% 30%,#2a3d8fcc 0,transparent 62%),
+radial-gradient(620px 420px at 92% 92%,#27b5c955 0,transparent 60%),
+radial-gradient(700px 500px at 0% 0%,#6c4cff40 0,transparent 60%),
+linear-gradient(180deg,#141033 0,#1d1838 100%)}
+.hh::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.55;background-image:
+radial-gradient(1.4px 1.4px at 12% 22%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 32% 78%,#fff 50%,transparent 51%),
+radial-gradient(1.6px 1.6px at 56% 14%,#ffe7a3 50%,transparent 51%),radial-gradient(1.1px 1.1px at 71% 62%,#fff 50%,transparent 51%),
+radial-gradient(1.3px 1.3px at 88% 18%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 44% 46%,#cfc8ff 50%,transparent 51%),
+radial-gradient(1.5px 1.5px at 6% 64%,#ffe7a3 50%,transparent 51%),radial-gradient(1.1px 1.1px at 95% 80%,#fff 50%,transparent 51%)}
+.hh .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);grid-template-areas:"top vis" "bot vis";column-gap:56px;align-items:center;padding-top:44px;padding-bottom:72px;min-height:min(calc(100svh - 72px),780px)}
+.hh-top{grid-area:top;align-self:end}.hh-bot{grid-area:bot;align-self:start}.hh-vis{grid-area:vis}
+.hh-pill{display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 8px;border-radius:999px;background:#ffffff14;box-shadow:inset 0 0 0 1px #ffffff26;font-size:14px;font-weight:900;letter-spacing:.01em;color:#fff}
+.hh-pill i{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#27b5c9,#2a3d8f);font-style:normal}
+.hh-pill svg{width:16px;height:16px}
+.hh h1{font-size:clamp(34px,4.6vw,64px);line-height:1.04;letter-spacing:-.035em;margin:22px 0 0;color:#fff;text-wrap:balance}
+.hh h1 em{font-style:normal;background:linear-gradient(92deg,#ffd166,#ffc233 45%,#ff9f43);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hh-prod{display:flex;align-items:center;gap:14px;margin:26px 0 12px}
+.hh-prod img{width:60px;height:60px;border-radius:16px;box-shadow:0 8px 22px -6px #000a,0 0 0 1px #ffffff26}
+.hh-prod b{display:block;font-size:22px;font-weight:1000;letter-spacing:-.015em;line-height:1.15}
+.hh-prod small{display:block;font-size:13px;font-weight:800;color:#bdb6e6;letter-spacing:.06em;text-transform:uppercase}
+.hh-lead{font-size:clamp(17px,1.5vw,19.5px);color:#d9d4f5;max-width:540px;font-weight:600}
+.hh-lead b{color:#fff;font-weight:900}
+.hh-ctas{display:flex;flex-direction:column;align-items:stretch;gap:12px;margin:26px 0 16px;max-width:420px}
+.hh-ctas .hh-app{justify-content:flex-start;white-space:nowrap}.hh-ctas .hh-app .pr{margin-left:auto}
+@media (max-width:420px){.hh-ctas .hh-app{font-size:16px;gap:10px;padding:11px 11px 11px 15px}.hh-ctas .hh-app .pr{font-size:13.5px}}
+.hh-yt>svg{color:#ff3b3b}
+.hh-vbox{border-radius:20px}.hh-vnote{margin:14px 0 0;text-align:center;font-size:13px;font-weight:700;color:#aaa3d4}
+.hh-app{display:inline-flex;align-items:center;gap:14px;background:#fff;color:#120e2c;text-decoration:none;border-radius:18px;padding:12px 14px 12px 20px;font-weight:1000;font-size:18px;box-shadow:0 18px 40px -14px #ffc23399,0 2px 0 #ffffff inset;transition:transform .15s,box-shadow .15s}
+.hh-app:hover{transform:translateY(-2px);box-shadow:0 24px 48px -14px #ffc233bb}
+.hh-app>svg{width:26px;height:26px;flex:none}
+.hh-app .pr{background:#120e2c;color:#ffc233;border-radius:12px;padding:6px 10px;font-size:14.5px;font-weight:1000;white-space:nowrap}
+.hh-try{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;border-radius:18px;padding:15px 22px;font-weight:900;font-size:17px;box-shadow:inset 0 0 0 1.5px #ffffff59;transition:background .15s,box-shadow .15s}
+.hh-try:hover{background:#ffffff12;box-shadow:inset 0 0 0 1.5px #fff}
+.hh-try svg{width:20px;height:20px}
+.hh-sub{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;font-size:14.5px;font-weight:800;color:#bdb6e6}
+.hh-gp{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 10px;border-radius:12px;box-shadow:inset 0 0 0 1.5px #ffffff2e;color:#d9d4f5}
+.hh-gp svg{width:18px;height:18px}
+.hh-sub a{color:#fff;text-underline-offset:3px}
+.hh-trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin:22px 0 0;padding:16px 0 0;border-top:1px solid #ffffff1f;list-style:none;padding-left:0}
+.hh-trust li{display:inline-flex;align-items:center;gap:7px;font-weight:900;font-size:15px;color:#fff}
+.hh-trust svg{width:18px;height:18px;color:#ffc233}
+.hh-legal{margin-top:14px;font-size:13px;color:#aaa3d4;font-weight:700}
+.hh-vis{position:relative;margin:0}
+.hh-vis::before{content:"";position:absolute;inset:8% 4% -6%;background:radial-gradient(closest-side,#27b5c966,transparent);filter:blur(30px);z-index:-1}
+.hh-tag{position:absolute;z-index:3;top:-16px;left:28px;display:inline-flex;align-items:center;gap:8px;background:#ffc233;color:#120e2c;border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:1000;box-shadow:0 10px 24px -8px #000c}
+.hh-tag::before{content:"";width:8px;height:8px;border-radius:50%;background:#120e2c;animation:hhb 1.6s ease-in-out infinite}
+.hh-dev{position:relative;border-radius:30px;padding:12px;background:linear-gradient(145deg,#3a3566,#17132f);box-shadow:0 0 0 1px #ffffff1f,0 40px 80px -24px #000d,inset 0 1px 0 #ffffff2e}
+.hh-scr{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:1056/604;background:#1d1838}
+.hh-scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hh-scr .q2{opacity:0;animation:hq2 15s infinite}.hh-scr .q3{opacity:0;animation:hq3 15s infinite}
+.hh-cap{display:flex;justify-content:center;gap:8px;margin-top:18px;padding:0;list-style:none}
+.hh-cap li{font-size:13.5px;font-weight:900;color:#bdb6e6;padding:6px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px #ffffff26}
+.hh-cap .c1{animation:hc1 15s infinite}.hh-cap .c2{animation:hc2 15s infinite}.hh-cap .c3{animation:hc3 15s infinite}
+.hh-ico{position:absolute;z-index:3;right:-20px;top:-34px;width:88px;height:88px;border-radius:24px;box-shadow:0 18px 36px -10px #000c,0 0 0 3px #ffffff2e;animation:hf 6s ease-in-out infinite}
+@keyframes hq2{0%,30%{opacity:0}33.3%,63%{opacity:1}66.6%,100%{opacity:0}}
+@keyframes hq3{0%,63%{opacity:0}66.6%,96.5%{opacity:1}100%{opacity:0}}
+@keyframes hc1{0%,30%,100%{background:#ffffff1f;color:#fff}33.3%,96.5%{background:none;color:#bdb6e6}}
+@keyframes hc2{0%,30%,66.6%,100%{background:none;color:#bdb6e6}33.3%,63%{background:#ffffff1f;color:#fff}}
+@keyframes hc3{0%,63%{background:none;color:#bdb6e6}66.6%,96.5%{background:#ffffff1f;color:#fff}100%{background:none;color:#bdb6e6}}
+@keyframes hf{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(-1deg)}}
+@keyframes hhb{0%,100%{opacity:1}50%{opacity:.25}}
+.hh :focus-visible{outline-color:#ffc233}
+@media (max-width:980px){
+.hh .wrap{grid-template-columns:1fr;grid-template-areas:"top" "vis" "bot";min-height:0;padding-top:28px;padding-bottom:60px;row-gap:0}
+.hh-vis{margin:30px 0 4px;max-width:640px;width:100%;justify-self:center}
+.hh-top,.hh-bot{max-width:640px;width:100%;justify-self:center}
+}
+@media (max-width:640px){
+.hh .wrap{padding-top:20px;padding-bottom:48px}
+.hh-pill{font-size:12.5px;padding:5px 12px 5px 6px}.hh-pill i{width:22px;height:22px}
+.hh h1{font-size:clamp(30px,8.6vw,38px);margin-top:14px}
+.hh-vis{margin:24px 0 0}
+.hh-dev{border-radius:20px;padding:7px}.hh-scr{border-radius:14px}
+.hh-tag{top:-13px;left:14px;font-size:12px;padding:5px 11px}
+.hh-ico{display:none}
+.hh-cap{margin-top:12px;gap:6px}.hh-cap li{font-size:12px;padding:4px 10px}
+.hh-prod{margin:22px 0 10px}.hh-prod img{width:52px;height:52px;border-radius:14px}.hh-prod b{font-size:19px}
+.hh-ctas{margin:22px 0 16px}
+.hh-app,.hh-try{width:100%;justify-content:center}
+.hh-app{padding:12px 12px 12px 16px;font-size:17px}.hh-app .pr{margin-left:auto}
+.hh-trust{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}.hh-trust li{font-size:14.5px}
+}
+.hh-ctas .hh-app{min-height:56px}
+@media (max-width:420px){.hh-ctas .hh-app{font-size:14.5px;gap:8px;letter-spacing:-.01em}.hh-ctas .hh-app .pr{padding:5px 8px}}
+</style>
 </head>
 <body>
 <header class="nav"><div class="wrap"><a class="logo" href="/" aria-label="Tamakala Games"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lgn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c4cff"/><stop offset="1" stop-color="#ff6b6b"/></linearGradient></defs><rect width="40" height="40" rx="12" fill="url(#lgn)"/><path d="M20 9l3.3 6.8 7.4 1-5.4 5.2 1.3 7.4L20 25.9l-6.6 3.5 1.3-7.4-5.4-5.2 7.4-1z" fill="#fff" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="31.5" cy="31.5" r="3.3" fill="#ffc233"/></svg><span>Tamakala<small>GAMES</small></span></a><nav class="links" aria-label="Menu"><a href="/#oyunlar">Games</a><a href="/#aileler">For parents</a><a href="/#ogretmenler">Teachers</a><a href="/rehber/">Guides</a><a href="/basin/">Press kit</a><a href="/destek/">Support</a></nav><button class="menubtn" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></header>
 <main>
-<section class="ghero" style="--g:#ff8a3d;--g2:#1d6b4f;--gt:#fff3ea;--gv:radial-gradient(circle at 80% 10%,#ffb36b88,transparent 45%),linear-gradient(150deg,#3fae7c,#17573f)"><div class="wrap">
-<div>
-<div class="crumbs"><a href="/">Tamakala Games</a> / <a href="/#oyunlar">Games</a></div>
-<img class="appicon" src="/img/v2/brainosaur/icon-256.webp" width="112" height="112" alt="Brainosaur">
-<h1>Brainosaur<small>Gifted Test Prep</small></h1>
-<p class="tag">Turn gifted & talented test practice into a dinosaur adventure.</p>
-<p class="lead">Your child travels through 12 time periods with Milo, Tiko the baby dinosaur and Grandpa Woolly. Every obstacle is a picture, number or shape puzzle in the style of US school G&T screening tests.</p>
-<div class="meta"><span class="chip">Ages 5–9 · K–3</span><span class="chip">Android · iPhone · iPad</span><span class="chip">No ads</span><span class="chip">Offline</span><span class="chip">One-time purchase · no subscription</span></div>
-<div class="stores"><span class="store soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5l9.5 8.5L5 20.5c-.6-.3-1-.9-1-1.6V5.1c0-.7.4-1.3 1-1.6z"/><path d="M14.5 12l3-2.7 2.3 1.3c1 .6 1 2.2 0 2.8l-2.3 1.3z"/><path d="M5 3.5l12.5 5.8M5 20.5l12.5-5.8"/></svg><span><small>Coming soon</small><b>Google Play</b></span></span><a class="store" data-store="apple" data-place="brainosaur-hero" href="https://apps.apple.com/app/id6823756292?pt=129580598&amp;ct=web-br-hero&amp;mt=8" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg><span><small>Download on the</small><b>App Store</b></span></a></div>
-<div class="watches"><a class="watch" href="#" data-play-video><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor" stroke-linejoin="round"/></svg></i>Watch the video</a> <a class="watch" href="/brainosaur/try/"><i style="background:#2fa866"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2.5 2.5 0 0 0-3-1zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/></svg></i>Try 5 free puzzles</a></div>
+<section class="hh" aria-labelledby="hh-h"><div class="wrap">
+<div class="hh-top">
+<span class="hh-pill"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17c2 0 3-1 4-3l1-3c.6-1.8 2.2-3 4-3h3l2-3h2l1 2-2 2v3c0 3-2 5-5 5h-1l-1 3h-2l.5-3H8l-1 3H5l.5-3"/><circle cx="17.5" cy="6.3" r=".6" fill="currentColor"/></svg></i>Brainosaur: Gifted Test Prep · Ages 5–9 · K–3</span>
+<h1 id="hh-h">Does your child get bored practicing for the <em>CogAT?</em></h1>
 </div>
-<div><div class="vid rv"><div class="vbox"><img src="/img/v2/brainosaur/hero-900.webp" srcset="/img/v2/brainosaur/hero-900.webp 900w, /img/v2/brainosaur/hero-1800.webp 1800w" sizes="(max-width:980px) 92vw, 620px" alt="" fetchpriority="high"><button data-yt="HCQmctV4VM8" aria-label="Play the trailer"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor" stroke-linejoin="round"/></svg></i><span>Watch the trailer</span></button></div></div><p class="vnote">The video loads from YouTube (privacy-enhanced mode) only when you press play.</p></div>
+<figure class="hh-vis">
+<span class="hh-tag">Intro + first 2 adventures</span>
+<div class="hh-dev"><div class="vbox hh-vbox"><img src="/img/v2/brainosaur/hero-900.webp" srcset="/img/v2/brainosaur/hero-900.webp 900w, /img/v2/brainosaur/hero-1800.webp 1800w" sizes="(max-width:640px) calc(100vw - 46px), (max-width:980px) 640px, 600px" width="900" height="506" fetchpriority="high" alt="Brainosaur: game intro and gameplay of the first 2 adventures"><button data-yt="rUEsbI5g7V8" aria-label="Play the intro + first 2 adventures video"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor" stroke-linejoin="round"/></svg></i><span>Intro + first 2 adventures</span></button></div></div>
+<img class="hh-ico" src="/img/v2/brainosaur/icon-256.webp" width="256" height="256" alt="">
+<p class="hh-vnote">Video loads from YouTube (privacy-enhanced mode) when you press play.</p>
+</figure>
+<div class="hh-bot">
+<div class="hh-prod"><img src="/img/v2/brainosaur/icon-256.webp" width="60" height="60" alt=""><div><b>Brainosaur: Gifted Test Prep</b><small>Tamakala Games · Ages 5–9</small></div></div>
+<p class="hh-lead">A dino adventure with <b>16 CogAT-, CCAT- and NNAT-style question types</b> (verbal, quantitative, non-verbal) and an explanation after every mistake.</p>
+<div class="hh-ctas">
+<a class="hh-app hh-yt" href="https://youtu.be/rUEsbI5g7V8" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg>Watch the intro + first 2 adventures</a>
+<a class="hh-app" data-store="apple" data-place="brainosaur-hero" href="https://apps.apple.com/app/id6823756292?pt=129580598&amp;ct=web-br-hero&amp;mt=8" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>Download on the App Store<span class="pr">$9.99</span></a>
+</div>
+<div class="hh-sub"><a href="/brainosaur/try/">Try 5 free puzzles</a></div>
+<ul class="hh-trust" aria-label="Purchase terms"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>One-time purchase</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No ads</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No subscription</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works offline</li></ul>
+<p class="hh-legal">For iPhone and iPad.</p>
+</div>
 </div></section><section style="--g:#ff8a3d;--g2:#1d6b4f;--gt:#fff3ea;--gv:radial-gradient(circle at 80% 10%,#ffb36b88,transparent 45%),linear-gradient(150deg,#3fae7c,#17573f)"><div class="wrap"><div class="stats rv" style="--n:4"><div><b>66</b><span>adventures</span></div><div><b>12</b><span>time periods</span></div><div><b>3</b><span>test parts</span></div><div><b>15–20</b><span>minutes a day</span></div></div></div></section><section class="sec" style="--g:#ff8a3d;--g2:#1d6b4f;--gt:#fff3ea;--gv:radial-gradient(circle at 80% 10%,#ffb36b88,transparent 45%),linear-gradient(150deg,#3fae7c,#17573f)" style="padding-bottom:40px"><div class="wrap center rv"><span class="eyebrow">Screenshots</span>
 <h2 class="h2">Inside the game</h2></div>
 <div class="gallery land"><button data-full="/img/v2/brainosaur/shot-en-1-l.webp"><img src="/img/v2/brainosaur/shot-en-1-s.webp" width="760" height="350" alt="Brainosaur title" loading="lazy"></button><button data-full="/img/v2/brainosaur/shot-en-2-l.webp"><img src="/img/v2/brainosaur/shot-en-2-s.webp" width="760" height="350" alt="Picture puzzles" loading="lazy"></button><button data-full="/img/v2/brainosaur/shot-en-3-l.webp"><img src="/img/v2/brainosaur/shot-en-3-s.webp" width="760" height="350" alt="Shape puzzles" loading="lazy"></button><button data-full="/img/v2/brainosaur/shot-en-4-l.webp"><img src="/img/v2/brainosaur/shot-en-4-s.webp" width="760" height="350" alt="Story adventures with dinosaur friends" loading="lazy"></button><button data-full="/img/v2/brainosaur/shot-en-5-l.webp"><img src="/img/v2/brainosaur/shot-en-5-s.webp" width="760" height="350" alt="Test-Ready Report" loading="lazy"></button><button data-full="/img/v2/brainosaur/shot-en-6-l.webp"><img src="/img/v2/brainosaur/shot-en-6-s.webp" width="760" height="350" alt="Grandpa Woolly explains" loading="lazy"></button><button data-full="/img/v2/brainosaur/shot-en-7-l.webp"><img src="/img/v2/brainosaur/shot-en-7-s.webp" width="760" height="350" alt="Number puzzles" loading="lazy"></button></div>
