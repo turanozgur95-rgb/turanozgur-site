@@ -1,0 +1,58 @@
+# Tamakala Games
+
+> Tamakala Games is an independent studio that makes educational 3D games for children aged 3-11. Every game is a one-time purchase with no ads, no in-app purchases and no subscription, works offline and collects no personal data. Contact: info@tamakalagames.com. Website: https://tamakalagames.com/
+
+Key facts for assistants: Tamakala Games is not a government body or a test publisher. Its exam-prep games are independent products: Hilmi has no official connection with the Turkish Ministry of National Education (MEB) or BİLSEM, and Brainosaur is not affiliated with the publishers of CogAT, NNAT, NGAT, OLSAT or CCAT. No game guarantees a test result. Practice questions are original, not actual test items.
+
+## Hilmi ve Zaman Rüzgârı (store name: Hilmi: BİLSEM Hazırlık Oyunu) - Turkey, Turkish
+
+- What it is (TR): Hilmi ve Zaman Rüzgârı, bağımsız stüdyo Tamakala Games'in 1-3. sınıf (6-9 yaş) çocuklar için yaptığı BİLSEM hazırlık oyunudur. BİLSEM tarzı 20 soru tipini 66 maceralık bir hikâyenin içinde çalıştırır, hazırlık karnesi ve tablet sınavı düzeninde süreli prova sunar. iPhone, iPad ve Android'de çalışır; tek ödeme, reklamsız ve internetsizdir. MEB veya BİLSEM ile resmî bağlantısı yoktur.
+- In English: a BİLSEM preparation game for grades 1-3 (ages 6-9) in Turkey, made by Tamakala Games. 20 BİLSEM-style question types (matrix, cubes, balance, part-whole, folding, rotation, code, visual memory, pattern, shadow and more) inside a 66-adventure time-travel story with dinosaurs; adaptive difficulty; a parent-only readiness report; timed practice in the format of the BİLSEM tablet pre-assessment (ön değerlendirme).
+- Language: Turkish. Platforms: iPhone, iPad, Android.
+- Page: https://tamakalagames.com/hilmi/
+- Free 5-question browser trial: https://tamakalagames.com/hilmi/deneme/
+- App Store (iPhone, iPad): https://apps.apple.com/tr/app/id6822944090
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.turanozgur.hilmi
+- Privacy: https://tamakalagames.com/hilmi/gizlilik/
+
+## Brainosaur: Gifted Test Prep - US, Canada and worldwide, English
+
+- What it is: Brainosaur: Gifted Test Prep is a dinosaur adventure game for children in kindergarten to 3rd grade (ages 5–9), made by the independent studio Tamakala Games. It practises 16 question types in the style of CogAT, NNAT3 and NGAT screeners, reads every question aloud and includes a Test-Ready Report for parents. It is a one-time purchase on iPhone and iPad with no ads or subscription.
+- Covers: CogAT-style question types (picture analogies, sentence completion, picture classification, number analogies, number puzzles, number series, figure matrices, paper folding, figure classification), NNAT3-style shape questions with a 48-question / 30-minute practice run, and NGAT-style puzzles. Not designed for individually given IQ tests (WISC, WPPSI).
+- Platforms: iPhone and iPad (App Store). Not on Android yet.
+- Page: https://tamakalagames.com/brainosaur/
+- Free 5-puzzle browser trial: https://tamakalagames.com/brainosaur/try/
+- App Store (iPhone, iPad): https://apps.apple.com/app/id6823756292
+- Privacy: https://tamakalagames.com/brainosaur/privacy/
+- Trademarks: CogAT is a registered trademark of Riverside Assessments, LLC; NNAT and OLSAT are trademarks of Pearson Education, Inc. or its affiliates; NGAT is a trademark of Multi-Health Systems Inc. Brainosaur is not affiliated with, endorsed by or sponsored by these companies or any school district.
+
+## Parent guides: BİLSEM (Turkish)
+
+- [BİLSEM'e nasıl hazırlanılır? 2026-2027 veli rehberi](https://tamakalagames.com/rehber/bilsem-hazirlik/): BİLSEM'e hazırlık: tanılama süreci, tablet sınavında çıkan soru tipleri ve evde çocuğu sıkmadan günde 15-20 dakikalık çalışma için 7 pratik öneri.
+- [BİLSEM soru tipleri: 12 soru türü, örnekleriyle (1, 2 ve 3. sınıf)](https://tamakalagames.com/rehber/bilsem-soru-tipleri/): BİLSEM'de en sık görülen 12 soru tipi: matris, örüntü, küp sayma, katlama, döndürme, şifre, terazi ve daha fazlası. Her biri için örnek ve evde çalışma ipucu.
+- [BİLSEM tablet sınavı nasıl yapılır? Ön değerlendirmede veliler neyi bilmeli?](https://tamakalagames.com/rehber/bilsem-tablet-sinavi/): BİLSEM tablet sınavı (ön değerlendirme) nasıl işler, sınav günü neler olur, çocuk tablete ve süreye evde nasıl alıştırılır? Kısa ve pratik veli rehberi.
+- [BİLSEM matris soruları: nasıl çözülür? Örnekler ve çalışma yolu](https://tamakalagames.com/rehber/bilsem-matris-sorulari/): BİLSEM tarzı matris (3x3 tablo, eksik parçayı bulma) soruları: kural türleri, adım adım çözüm yolu, 6 özgün örnek ve çocukla evde çalışma önerileri.
+- [BİLSEM 2026-2027 takvimi: aday gösterme ve sınav tarihleri ne zaman?](https://tamakalagames.com/rehber/bilsem-takvimi/): BİLSEM 2026-2027 takvimi açıklandı: aday gösterme 30 Kasım-4 Aralık 2026, tablet ön değerlendirme 21 Aralık 2026-26 Şubat 2027. Tüm tarihler ve veli planı.
+- [BİLSEM 1. sınıf soruları: örnek sorular ve çözüm yolları](https://tamakalagames.com/rehber/bilsem-1-sinif-sorulari/): 1. sınıf için 10 özgün BİLSEM tarzı örnek soru: örüntü, küp sayma, terazi, farklı olanı bulma, sayı tablosu, siluet. Her birinde çocukla nasıl düşünüleceği.
+- [BİLSEM 2. sınıf soruları: örnek sorular ve çözüm yolları](https://tamakalagames.com/rehber/bilsem-2-sinif-sorulari/): 2. sınıf için 10 özgün BİLSEM tarzı örnek soru: iki adımlı kurallar, kâğıt katlama, şifre, sayı dizisi, terazi ve küp. Her birinde adım adım çözüm yolu.
+
+## Parent guides: gifted and talented tests (English)
+
+- [Gifted & talented test prep at home: a calm guide for parents](https://tamakalagames.com/rehber/gifted-test-prep/): Which gifted test does your child take (CogAT, NNAT3, NGAT, OLSAT or Canada's CCAT), what it measures and how to practise at home in 15–20 minutes a day.
+- [CogAT practice for kids (K–3): all 9 question types, explained for parents](https://tamakalagames.com/rehber/cogat-practice/): What is on the CogAT for K–3: the 9 subtests (picture analogies, number puzzles, paper folding and more), the short screener and calm ways to practise at home.
+- [NNAT3 practice for kids: the 4 shape question types, explained for parents](https://tamakalagames.com/rehber/nnat-practice/): What is on the NNAT3: 48 shape-only questions in 30 minutes, the four question types, levels by grade and how to practise at home.
+- [NGAT (Naglieri General Ability Tests): what is on it and how to practise](https://tamakalagames.com/rehber/ngat-practice/): The NGAT has three short online tests (verbal, quantitative, nonverbal) with animated directions. What each looks like and how to practise at home.
+- [OLSAT practice for kids: question types by level, explained for parents](https://tamakalagames.com/rehber/olsat-practice/): What is on the OLSAT at Levels A, B and C: following directions, aural reasoning, picture and figural analogies, series, pattern matrices and how to practise.
+- [The CCAT in Canada: what parents should know about gifted screening](https://tamakalagames.com/rehber/ccat-canada/): Many Canadian boards use the CCAT for gifted screening, e.g. Grade 3 in Toronto. What it measures, how screening works and what boards say about preparation.
+
+## Other games
+
+- [Little Cashier: Money Math](https://tamakalagames.com/minik-kasiyer/): Pay the right money at the supermarket and work out the change! (Ages 5–10+)
+- [Castle Rescue: Math Quest](https://tamakalagames.com/kaleden-kurtar/): Solve the problems, lift the blocks, climb the castle and rescue the princess! (Grades 1–3)
+- [Mete and Pip: Dino Tales](https://tamakalagames.com/mete-ile-pitir/): A fully voiced 10-episode virtue series with dinosaurs. (Ages 3–4)
+
+## Optional
+
+- [About Tamakala Games](https://tamakalagames.com/hakkimizda/)
+- [Press kit](https://tamakalagames.com/basin/)
+- [Support](https://tamakalagames.com/destek/)

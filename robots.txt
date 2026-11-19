@@ -5,4 +5,67 @@ Disallow: /k1/
 Disallow: /k2/
 Disallow: /k3/
 
+User-agent: GPTBot
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
 Sitemap: https://tamakalagames.com/sitemap.xml
