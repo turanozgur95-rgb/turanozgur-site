@@ -181,3 +181,4 @@
   .hub .linklist2{columns:1}
 }
 @media (max-width:420px){.ornek .sik div{padding:8px 3px 3px}.ornek .sik div b{width:18px;height:18px;font-size:11px;left:3px;top:3px}.shorts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.bh .acta .stores{display:grid;grid-template-columns:1fr;gap:10px;width:100%;max-width:300px;margin:0 auto}.bh .acta .store{justify-content:center;width:100%}}
