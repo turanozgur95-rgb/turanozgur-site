@@ -26,6 +26,24 @@ Key facts for assistants: Tamakala Games is not a government body or a test publ
 - Privacy: https://tamakalagames.com/brainosaur/privacy/
 - Trademarks: CogAT is a registered trademark of Riverside Assessments, LLC; NNAT and OLSAT are trademarks of Pearson Education, Inc. or its affiliates; NGAT is a trademark of Multi-Health Systems Inc. Brainosaur is not affiliated with, endorsed by or sponsored by these companies or any school district.
 
+## BİLSEM hazırlık merkezi (Turkish)
+
+- [BİLSEM soruları ve hazırlık merkezi](https://tamakalagames.com/rehber/bilsem/): 13 BİLSEM soru tipi için video konu anlatımı, sınırsız rastgele pratik (1-2-3. sınıf), çözümlü örnekler ve ücretsiz PDF'ler. Sorular özgündür; gerçek sınav sorusu değildir.
+- [BİLSEM Matris soruları](https://tamakalagames.com/rehber/bilsem/matris-sorulari/): BİLSEM matris soruları nasıl çözülür? Renk, şekil, sayı ve yön kuralları; adım adım çözümlü örnekler, video anlatım ve 28 sayfalık ücretsiz çözümlü PDF.
+- [BİLSEM Küp sayma soruları](https://tamakalagames.com/rehber/bilsem/kup-sayma-sorulari/): BİLSEM küp sayma soruları nasıl çözülür? Görünmeyen küpler, sütun sütun ve kat kat sayma; çözümlü örnekler, video anlatım ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Kâğıt katlama ve ayna soruları](https://tamakalagames.com/rehber/bilsem/kagit-katlama-ayna-sorulari/): BİLSEM kağıt katlama ve ayna soruları nasıl çözülür? Katlayıp delme, simetri ve tersten okuma; çözümlü örnekler, video anlatım ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Döndürme soruları](https://tamakalagames.com/rehber/bilsem/dondurme-sorulari/): BİLSEM döndürme soruları nasıl çözülür? Yarım tur, sağa ve sola çeyrek tur, köşe takibi; çözümlü örnekler, video anlatım ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Gölge soruları](https://tamakalagames.com/rehber/bilsem/golge-sorulari/): BİLSEM gölge soruları nasıl çözülür? Şekil, büyüklük ve yer kontrolüyle doğru gölgeyi bulma; çözümlü örnekler, video anlatım ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Parça-bütün soruları](https://tamakalagames.com/rehber/bilsem/parca-butun-sorulari/): BİLSEM parça-bütün soruları nasıl çözülür? Tekrar, ayna ve yarım tur desenleriyle eksik parçayı bulma; çözümlü örnekler, video ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Örüntü soruları](https://tamakalagames.com/rehber/bilsem/oruntu-sorulari/): BİLSEM örüntü soruları nasıl çözülür? Şekil ve sayı örüntülerinde sıradakini bulma, farkları yazma; çözümlü örnekler, video anlatım ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Şekil sayma soruları](https://tamakalagames.com/rehber/bilsem/sekil-sayma-sorulari/): BİLSEM şekil sayma ve kaç kare var soruları nasıl çözülür? Düzenli sayma, küçükten büyüğe kare sayma; çözümlü örnekler, video ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Farklı olan ve şekil benzeşimi soruları](https://tamakalagames.com/rehber/bilsem/farkli-olani-bulma-sorulari/): BİLSEM farklı olanı bulma ve şekil benzeşimi soruları nasıl çözülür? Ortak özellik ve değişen özellik; çözümlü örnekler, video ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Şifre ve hızlı şifre soruları](https://tamakalagames.com/rehber/bilsem/sifre-sorulari/): BİLSEM şifre ve hızlı şifre soruları nasıl çözülür? Şekil-rakam eşleştirme, kolay satırdan başlama; çözümlü örnekler, video ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Yön bulma soruları](https://tamakalagames.com/rehber/bilsem/yon-sorulari/): BİLSEM yön bulma soruları nasıl çözülür? Okları adım adım yürüme, iki karelik oklar, birbirini götüren oklar; çözümlü örnekler, video ve 28 sayfalık PDF.
+- [BİLSEM Terazi soruları](https://tamakalagames.com/rehber/bilsem/terazi-sorulari/): BİLSEM terazi soruları nasıl çözülür? Dengedeki kefeler, toplama ve yerine koyma yöntemi; adım adım çözümlü örnekler, video ve 28 sayfalık ücretsiz PDF.
+- [BİLSEM Görsel bellek ve sayı dizisi soruları](https://tamakalagames.com/rehber/bilsem/gorsel-bellek-sorulari/): BİLSEM görsel bellek ve sayı dizisi soruları nasıl çözülür? Renk-şekil-yer ile hatırlama, ikişerli gruplama, tersten söyleme; örnekler, video, 28 sayfalık PDF.
+- [BİLSEM 3. sınıf soruları](https://tamakalagames.com/rehber/bilsem-3-sinif-sorulari/): 3. sınıf düzeyinde çözümlü örnekler, karma pratik ve 40 sayfalık karma deneme PDF.
+
 ## Parent guides: BİLSEM (Turkish)
 
 - [BİLSEM'e nasıl hazırlanılır? 2026-2027 veli rehberi](https://tamakalagames.com/rehber/bilsem-hazirlik/): BİLSEM'e hazırlık: tanılama süreci, tablet sınavında çıkan soru tipleri ve evde çocuğu sıkmadan günde 15-20 dakikalık çalışma için 7 pratik öneri.

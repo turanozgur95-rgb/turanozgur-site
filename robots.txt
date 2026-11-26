@@ -69,3 +69,4 @@ Disallow: /k2/
 Disallow: /k3/
 
 Sitemap: https://tamakalagames.com/sitemap.xml
+Sitemap: https://tamakalagames.com/sitemap-video.xml
