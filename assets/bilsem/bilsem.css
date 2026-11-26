@@ -183,7 +183,7 @@
 @media (max-width:420px){.ornek .sik div{padding:8px 3px 3px}.ornek .sik div b{width:18px;height:18px;font-size:11px;left:3px;top:3px}.shorts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.bh .acta .stores{display:grid;grid-template-columns:1fr;gap:10px;width:100%;max-width:300px;margin:0 auto}.bh .acta .store{justify-content:center;width:100%}}
 /* ---------- sınav provası ---------- */
-.bqs{position:relative;margin:24px 0 32px;border-radius:28px;background:#fff;box-shadow:0 1px 2px #17215a12,0 24px 60px -22px #17215a59;overflow:hidden;overflow:clip;outline:none;color-scheme:light;min-height:420px}
+.bqs{position:relative;overflow-anchor:none;margin:24px 0 32px;border-radius:28px;background:#fff;box-shadow:0 1px 2px #17215a12,0 24px 60px -22px #17215a59;overflow:hidden;overflow:clip;outline:none;color-scheme:light;min-height:420px}
 .bqs h3{margin:0 0 10px;font-size:19px;letter-spacing:-.01em;color:var(--ink)}
 .bqs-kafa{display:flex;flex-direction:column;gap:3px;padding:22px 26px;background:linear-gradient(120deg,#2a3d8f,#1aa9bd);color:#fff}
 .bqs-kafa b{font-size:26px;font-weight:900;letter-spacing:-.015em;color:#fff}
@@ -235,7 +235,7 @@
 .bqs-bayrak{border:0;border-radius:999px;padding:12px 18px;font-weight:900;font-size:15px;cursor:pointer;background:#fff8e1;color:#6b4b00;box-shadow:inset 0 0 0 2px #ffe08a}
 .bqs-bayrak.on{background:#ffc233;color:#3b2a00;box-shadow:none}
 .bqs .bqs-ipucu{margin:0;padding:0 22px 16px;font-size:13px;color:var(--ink3)}
-.bqs-onay{position:absolute;inset:0;background:#17215a73;display:flex;align-items:center;justify-content:center;padding:16px;z-index:5;animation:bqpIn .2s}
+.bqs-onay{position:fixed;inset:0;z-index:1000!important;background:#17215a73;display:flex;align-items:center;justify-content:center;padding:16px;z-index:5;animation:bqpIn .2s}
 .bqs-onay-k{background:#fff;border-radius:22px;padding:22px;max-width:440px;box-shadow:0 30px 60px -20px #0008}
 .bqs .bqs-onay-k p{margin:0 0 16px;font-size:17px;line-height:1.5;color:var(--ink)}
 .bqs-onay-d{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
@@ -334,3 +334,6 @@
 .pcta-ok{margin-left:auto;font-size:26px;font-weight:900}
 .bh .tbl{overflow-x:auto;margin:10px 0 14px}.bh .tbl table{width:100%;border-collapse:collapse;font-size:16px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:inset 0 0 0 2px #eef3fb}.bh .tbl th,.bh .tbl td{text-align:left;padding:11px 14px;border-bottom:1px solid #eef3fb}.bh .tbl th{background:#f4f7fd;font-size:14px}
 @media (max-width:560px){.pcta{padding:14px;gap:12px}.pcta-ik{width:42px;height:42px}.pcta-ok{display:none}.bh .tbl table{font-size:14.5px}.bh .tbl th,.bh .tbl td{padding:9px 10px}}
+
+.bqs-devam{display:flex;flex-wrap:wrap;gap:10px;padding:18px 26px 0}.bqs-devam button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left}.bqs-devam button small{font-size:13px;font-weight:700;opacity:.85}
+@media (max-width:760px){.bqs-devam{padding:16px 16px 0}.bqs-devam button{width:100%}}

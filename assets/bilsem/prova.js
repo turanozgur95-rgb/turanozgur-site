@@ -36,7 +36,33 @@
     kok.tabIndex = -1;
 
     function temizle() { clearInterval(tik); tik = null; kok.innerHTML = ""; }
-    function yukari() { var r = kok.getBoundingClientRect(); if (r.top < 0 || r.top > window.innerHeight * 0.6) kok.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    /* Kesin kaydırma: telefonda dokunma kaydırması sürerken de çalışsın diye anında + rAF + iki gecikmeli deneme */
+    function ustBosluk() { var n = document.querySelector("body > header, body > nav, .nav, .topbar"); var h = n ? n.getBoundingClientRect() : null; return (h && h.bottom > 0 && h.bottom < 160 && getComputedStyle(n).position !== "static" ? h.bottom : 0) + 12; }
+    function kaydir(hedef, odak) {
+      hedef = hedef || kok;
+      function yap() { var y = hedef.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || 0) - ustBosluk(); var t = Math.max(0, Math.round(y)); try { window.scrollTo({ top: t, left: 0, behavior: "instant" }); } catch (e) { window.scrollTo(0, t); } }
+      yap();
+      if (window.requestAnimationFrame) requestAnimationFrame(yap);
+      setTimeout(yap, 150); setTimeout(yap, 500); setTimeout(yap, 1000);
+      if (odak) { odak.tabIndex = -1; try { odak.focus({ preventScroll: true }); } catch (e) { } }
+    }
+    function yukari() { var r = kok.getBoundingClientRect(); if (r.top < 0 || r.top > window.innerHeight * 0.6) kaydir(kok); }
+    /* Yarım kalan ve biten prova cihazda saklanır (soru yerine tohum: küçük kayıt, aynı soru yeniden üretilir) */
+    function sakla() {
+      if (!S) return;
+      var o = { sv: S.sv, tip: S.tip, b: S.b, i: S.i, bitti: S.bitti, t0: S.t0, tb: S.tb || 0, sd: !!S.sd,
+        B: S.B.map(function (b) { return { idx: b.idx, sure: b.sure, kalan: Math.round(b.kalan * 10) / 10, bitti: b.bitti }; }),
+        Q: S.Q.map(function (c) { return { k: c.k, t: c.q.tohum, c: c.c, f: c.f ? 1 : 0, sn: Math.round(c.sn * 10) / 10, bg: c.bg ? 1 : 0, b: c.b }; }) };
+      ls(S.bitti ? "bqs-son" : "bqs-aktif", o);
+      if (S.bitti) { try { localStorage.removeItem("bqs-aktif"); } catch (e) { } }
+    }
+    function yukle(o) {
+      try {
+        var Y = { sv: o.sv, tip: o.tip, b: o.b, i: o.i || 0, bitti: !!o.bitti, t0: o.t0, tb: o.tb, sd: o.sd, B: o.B, Q: [] };
+        o.Q.forEach(function (x) { if (!KM[x.k]) throw 0; Y.Q.push({ q: BQ.uret(x.k, o.sv, x.t), k: x.k, c: x.c, f: !!x.f, sn: x.sn || 0, bg: !!x.bg, b: x.b }); });
+        return Y;
+      } catch (e) { return null; }
+    }
     window.addEventListener("beforeunload", function (e) { if (S && !S.bitti) { e.preventDefault(); e.returnValue = ""; } });
 
     /* ------------------------------------------------ başlangıç ekranı */
@@ -77,6 +103,24 @@
         "<p class=\"bqs-uyari\">Bu bir hazırlık provasıdır; resmî bir sınav ya da resmî bir sonuç değildir. Sorular Tamakala Games'in özgün sorularıdır.</p>";
       ic.appendChild(sag);
       g.appendChild(ic);
+      var aktif = ls("bqs-aktif"), sonK = ls("bqs-son");
+      if ((aktif && aktif.Q) || (sonK && sonK.Q)) {
+        var dv = el("div", "bqs-devam");
+        if (aktif && aktif.Q) {
+          var ab = aktif.B[aktif.b] || {};
+          dv.appendChild(btn("bqp-b1", "Yarım kalan provaya devam et <small>" + SV_AD[aktif.sv] + " · " + (aktif.B.length > 1 ? (aktif.b + 1) + ". bölüm · " : "") + "kalan " + saat(ab.kalan || 0) + "</small>", function () {
+            var Y = yukle(aktif); if (!Y) { try { localStorage.removeItem("bqs-aktif"); } catch (e) { } return giris(); }
+            S = Y; if (S.B[S.b].bitti) { if (S.b < S.B.length - 1) ara(false); else { S.bitti = true; S.tb = Date.now(); sonuc(false); } } else bolumBasla(S.i);
+          }));
+        }
+        if (sonK && sonK.Q) {
+          dv.appendChild(btn(aktif && aktif.Q ? "bqp-b2" : "bqp-b1", "Son prova sonucunu gör <small>" + SV_AD[sonK.sv] + " · " + tarih(sonK.tb || sonK.t0) + "</small>", function () {
+            var Y = yukle(sonK); if (!Y) { try { localStorage.removeItem("bqs-son"); } catch (e) { } return giris(); }
+            S = Y; S.bitti = true; sonuc(S.sd, true);
+          }));
+        }
+        g.insertBefore(dv, g.children[1]);
+      }
       if (gecmis.length) {
         var son = gecmis[gecmis.length - 1];
         g.appendChild(el("p", "bqs-son", "Son provanız: <b>" + son.d + " / " + son.n + " doğru</b> · " + SV_AD[son.sv] + " · " + (son.tip === "tam" ? "tam" : "kısa") + " prova · " + tarih(son.t) + (gecmis.length > 1 ? " · toplam " + gecmis.length + " prova" : "")));
@@ -111,9 +155,10 @@
       bolumBasla();
     }
 
-    function bolumBasla() {
+    function bolumBasla(i) {
       temizle();
-      S.i = 0;
+      S.i = i || 0;
+      var say = 0;
       var bol = S.B[S.b];
       var son = Date.now();
       sinavEkrani();
@@ -123,6 +168,7 @@
         var cur = S.Q[bol.idx[S.i]];
         if (cur) cur.sn += dt;
         zamanYaz();
+        if (++say % 8 === 0) sakla();
         if (bol.kalan <= 0) { bol.kalan = 0; bolumBitir(true); }
       }, 250);
     }
@@ -138,7 +184,7 @@
       E.saat.setAttribute("role", "timer");
       E.saat.setAttribute("aria-label", "Kalan süre");
       ust.appendChild(E.saat);
-      ust.appendChild(btn("bqs-cik", "Çık", function () { onay("Provadan çıkmak istiyor musunuz? Bu prova kaydedilmez.", "Çık", giris); }));
+      ust.appendChild(btn("bqs-cik", "Çık", function () { onay("Provadan çıkmak istiyor musunuz? Bu prova kaydedilmez.", "Çık", function () { clearInterval(tik); S = null; try { localStorage.removeItem("bqs-aktif"); } catch (e) { } giris(); kaydir(kok); }); }));
       kok.appendChild(ust);
       E.ilerle = el("div", "bqs-ilerle", "<i></i>");
       kok.appendChild(E.ilerle);
@@ -259,6 +305,7 @@
       });
       E.ilerle.firstChild.style.width = (dolu / bol.idx.length * 100) + "%";
       E.ilerle.setAttribute("aria-label", dolu + " / " + bol.idx.length + " cevaplandı");
+      sakla();
     }
 
     function bolumSor() {
@@ -272,6 +319,7 @@
     }
 
     function onay(metin, evet, f, hayir) {
+      if (kok.querySelector(".bqs-onay")) return;
       var o = el("div", "bqs-onay");
       o.setAttribute("role", "alertdialog");
       o.setAttribute("aria-modal", "true");
@@ -291,8 +339,9 @@
       if (bol.bitti) return;
       bol.bitti = true; E.bellek = false;
       clearInterval(tik); tik = null;
-      if (S.b < S.B.length - 1) return ara(sureDoldu);
-      S.bitti = true;
+      if (S.b < S.B.length - 1) { sakla(); return ara(sureDoldu); }
+      S.bitti = true; S.tb = Date.now(); S.sd = !!sureDoldu;
+      sakla();
       sonuc(sureDoldu);
     }
 
@@ -303,13 +352,13 @@
       a.innerHTML = '<div class="bqs-ara-ik" aria-hidden="true">☕</div><h3>' + (S.b + 1) + ". bölüm tamamlandı" + (sureDoldu ? " (süre doldu)" : "") + "</h3>" +
         "<p>" + dolu + " / " + bol.idx.length + " soruyu cevapladınız. Cevaplar sonuç ekranında gösterilecek.</p>" +
         "<p>Sıradaki: <b>" + (S.b + 2) + ". bölüm · " + S.B[S.b + 1].idx.length + " soru · " + DAKIKA[S.sv] + " dakika</b>. Kısa bir mola verip hazır olduğunuzda başlayın.</p>";
-      a.appendChild(btn("bqp-b1", (S.b + 2) + ". bölümü başlat <span aria-hidden=\"true\">→</span>", function () { S.b++; bolumBasla(); yukari(); }));
+      a.appendChild(btn("bqp-b1", (S.b + 2) + ". bölümü başlat <span aria-hidden=\"true\">→</span>", function () { S.b++; bolumBasla(); kaydir(kok); }));
       kok.appendChild(a);
-      yukari();
+      kaydir(kok, a.querySelector("h3"));
     }
 
     /* ------------------------------------------------ sonuç */
-    function sonuc(sureDoldu) {
+    function sonuc(sureDoldu, eski) {
       temizle();
       var N = S.Q.length, d = 0, y = 0, bos = 0, kullan = 0;
       var kk = {};
@@ -323,12 +372,15 @@
       S.B.forEach(function (b) { kullan += b.sure - b.kalan; });
       var gecmis = ls(ANAH) || [];
       var once = null;
-      for (var i = gecmis.length - 1; i >= 0; i--) if (gecmis[i].sv === S.sv && gecmis[i].tip === S.tip) { once = gecmis[i]; break; }
-      var kay = { t: Date.now(), sv: S.sv, tip: S.tip, d: d, n: N, sn: Math.round(kullan), k: {} };
+      var tb = S.tb || Date.now();
+      for (var i = gecmis.length - 1; i >= 0; i--) if (gecmis[i].sv === S.sv && gecmis[i].tip === S.tip && gecmis[i].t < tb) { once = gecmis[i]; break; }
+      var kay = { t: tb, sv: S.sv, tip: S.tip, d: d, n: N, sn: Math.round(kullan), k: {} };
       KON.forEach(function (x) { kay.k[x.k] = [kk[x.k][0], kk[x.k][1]]; });
-      gecmis.push(kay);
-      if (gecmis.length > 30) gecmis = gecmis.slice(-30);
-      ls(ANAH, gecmis);
+      if (!gecmis.some(function (x) { return x.t === tb; })) {
+        gecmis.push(kay);
+        if (gecmis.length > 30) gecmis = gecmis.slice(-30);
+        ls(ANAH, gecmis);
+      }
 
       var r = el("div", "bqs-sonuc");
       /* özet */
@@ -392,12 +444,12 @@
       r.appendChild(cp);
 
       var dg = el("div", "bqs-son-d");
-      dg.appendChild(btn("bqp-b1", "Yeni sorularla tekrar dene", function () { baslat(); yukari(); }));
-      dg.appendChild(btn("bqp-b2", "Ayarları değiştir", function () { giris(); yukari(); }));
+      dg.appendChild(btn("bqp-b1", "Yeni sorularla tekrar dene", function () { ayar.sv = S.sv; ayar.tip = S.tip; baslat(); kaydir(kok); }));
+      dg.appendChild(btn("bqp-b2", "Ayarları değiştir", function () { giris(); kaydir(kok); }));
       dg.appendChild(btn("bqp-b2", "Yazdır", function () { window.print(); }));
       r.appendChild(dg);
       kok.appendChild(r);
-      yukari();
+      kaydir(kok, r.querySelector(".bqs-ozet-m h3"));
     }
 
     function halka(d, y, b, n) {
