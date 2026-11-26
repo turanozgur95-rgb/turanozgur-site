@@ -435,7 +435,7 @@
         s += '<text x="' + e[0].toFixed(1) + '" y="' + yy.toFixed(1) + '" text-anchor="' + an + '" font-size="13.5" font-weight="900" fill="#1d2742">' + g[0] + '</text><text x="' + e[0].toFixed(1) + '" y="' + (yy + 15).toFixed(1) + '" text-anchor="' + an + '" font-size="12" font-weight="800" fill="#5b6785">' + deg[i][0] + " / " + deg[i][1] + "</text>";
       });
       var et = GRUP.map(function (g, i) { return g[0] + " " + deg[i][0] + " / " + deg[i][1]; }).join(", ");
-      return '<svg class="bqs-radar" viewBox="-20 -6 ' + (W + 40) + " " + (H + 20) + '" role="img" aria-label="Beceri haritası: ' + et + '">' + s + "</svg>";
+      return '<svg class="bqs-radar" viewBox="-80 -6 ' + (W + 160) + " " + (H + 20) + '" role="img" aria-label="Beceri haritası: ' + et + '">' + s + "</svg>";
     }
 
     function cubuklar(kk) {
