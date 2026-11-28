@@ -68,5 +68,19 @@ Disallow: /k1/
 Disallow: /k2/
 Disallow: /k3/
 
+User-agent: Applebot
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /go/
+Disallow: /k1/
+Disallow: /k2/
+Disallow: /k3/
+
 Sitemap: https://tamakalagames.com/sitemap.xml
 Sitemap: https://tamakalagames.com/sitemap-video.xml
